@@ -1,0 +1,18 @@
+[
+  { "id": "node-main-gate",       "name": "Main Gate",                    "type": "entrance",   "floorId": "floor-gate-ground",   "panoramaId": "pano-main-gate" },
+  { "id": "node-reception",       "name": "Reception",                    "type": "service",    "floorId": "floor-gate-ground",   "panoramaId": "pano-reception" },
+  { "id": "node-admin-entrance",  "name": "Administration Building Entry","type": "entrance",   "floorId": "floor-admin-ground",  "panoramaId": "pano-admin-entrance" },
+  { "id": "node-admin-corridor",  "name": "Ground Floor Corridor",        "type": "corridor",   "floorId": "floor-admin-ground",  "panoramaId": "pano-admin-corridor" },
+  { "id": "node-admission-office","name": "Admission Office",             "type": "office",     "floorId": "floor-admin-ground",  "panoramaId": "pano-admission-office" },
+  { "id": "node-accounts-office", "name": "Accounts Office",              "type": "office",     "floorId": "floor-admin-ground",  "panoramaId": "pano-accounts-office" },
+  { "id": "node-admin-staircase", "name": "Admin Building Staircase",     "type": "staircase",  "floorId": "floor-admin-ground",  "panoramaId": null },
+  { "id": "node-admin-first-landing", "name": "Admin First Floor Landing","type": "corridor",   "floorId": "floor-admin-first",   "panoramaId": null },
+  { "id": "node-exam-cell",       "name": "Examination Cell",             "type": "office",     "floorId": "floor-admin-first",   "panoramaId": null },
+  { "id": "node-principal-office","name": "Principal Office",             "type": "office",     "floorId": "floor-admin-first",   "panoramaId": null },
+  { "id": "node-main-building-entrance", "name": "Main Building Entrance","type": "entrance",  "floorId": "floor-main-ground",   "panoramaId": "pano-main-building-entrance" },
+  { "id": "node-library",         "name": "Central Library",              "type": "facility",   "floorId": "floor-main-ground",   "panoramaId": null },
+  { "id": "node-main-staircase",  "name": "Main Building Staircase",      "type": "staircase",  "floorId": "floor-main-ground",   "panoramaId": "pano-main-staircase" },
+  { "id": "node-first-floor-corridor", "name": "First Floor Corridor",    "type": "corridor",   "floorId": "floor-main-first",    "panoramaId": "pano-first-floor-corridor" },
+  { "id": "node-computer-dept",   "name": "Computer Engineering Dept.",   "type": "department", "floorId": "floor-main-first",    "panoramaId": "pano-computer-dept" },
+  { "id": "node-hod-computer",    "name": "HOD Cabin — Computer Engg.",   "type": "office",     "floorId": "floor-main-first",    "panoramaId": "pano-hod-computer" }
+]

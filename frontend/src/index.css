@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+}
+
+/* Pannellum viewer full-height fix */
+.pnlm-container {
+  width: 100% !important;
+  height: 100% !important;
+}

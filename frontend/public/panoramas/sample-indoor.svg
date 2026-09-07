@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2048" viewBox="0 0 4096 2048">
+  <rect width="4096" height="2048" fill="#ECEFF1"/>
+  <rect width="4096" height="40" fill="#90A4AE"/>
+  <rect y="2008" width="4096" height="40" fill="#90A4AE"/>
+  <rect x="0" y="0" width="40" height="2048" fill="#90A4AE"/>
+  <rect x="4056" y="0" width="40" height="2048" fill="#90A4AE"/>
+  <rect x="40" y="40" width="4016" height="1968" fill="#F5F5F5"/>
+  <rect x="1800" y="400" width="500" height="900" fill="#BDBDBD" rx="4"/>
+  <rect x="1850" y="450" width="180" height="300" fill="#78909C" rx="4"/>
+  <rect x="2080" y="450" width="180" height="300" fill="#78909C" rx="4"/>
+  <rect x="1000" y="600" width="600" height="600" rx="12" fill="#E0E0E0"/>
+  <rect x="2500" y="600" width="600" height="600" rx="12" fill="#E0E0E0"/>
+  <text x="2048" y="1900" font-family="Arial" font-size="80" fill="#546E7A" text-anchor="middle" opacity="0.7">Reception Area (DEMO)</text>
+</svg>

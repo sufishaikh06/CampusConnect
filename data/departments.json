@@ -1,0 +1,29 @@
+[
+  {
+    "id": "dept-computer",
+    "name": "Computer Engineering",
+    "code": "CE",
+    "buildingId": "building-main",
+    "floorId": "floor-main-first",
+    "locationId": "demo-computer-dept",
+    "description": "B.Tech Computer Engineering programme. [DEMO DATA]"
+  },
+  {
+    "id": "dept-mechanical",
+    "name": "Mechanical Engineering",
+    "code": "ME",
+    "buildingId": "building-main",
+    "floorId": "floor-main-second",
+    "locationId": "demo-mechanical-dept",
+    "description": "B.Tech Mechanical Engineering programme. [DEMO DATA]"
+  },
+  {
+    "id": "dept-civil",
+    "name": "Civil Engineering",
+    "code": "CV",
+    "buildingId": "building-main",
+    "floorId": "floor-main-second",
+    "locationId": "demo-civil-dept",
+    "description": "B.Tech Civil Engineering programme. [DEMO DATA]"
+  }
+]

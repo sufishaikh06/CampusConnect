@@ -1,0 +1,134 @@
+[
+  {
+    "id": "demo-main-gate",
+    "name": "Main Gate",
+    "type": "entrance",
+    "buildingId": "building-gate",
+    "floorId": "floor-gate-ground",
+    "roomNumber": null,
+    "description": "Main campus entrance gate. All visitors start here. [DEMO DATA]",
+    "aliases": ["gate", "entrance", "main gate", "campus entrance", "entry"],
+    "navigationNodeId": "node-main-gate"
+  },
+  {
+    "id": "demo-reception",
+    "name": "Reception",
+    "type": "service",
+    "buildingId": "building-gate",
+    "floorId": "floor-gate-ground",
+    "roomNumber": "R-01",
+    "description": "Visitor reception and information desk. [DEMO DATA]",
+    "aliases": ["reception", "visitor desk", "information desk", "info desk", "front desk"],
+    "navigationNodeId": "node-reception"
+  },
+  {
+    "id": "demo-admission-office",
+    "name": "Admission Office",
+    "type": "office",
+    "buildingId": "building-admin",
+    "floorId": "floor-admin-ground",
+    "roomNumber": "A-102",
+    "description": "Handles all admission enquiries for undergraduate and postgraduate programmes. [DEMO DATA]",
+    "aliases": ["admission", "admission office", "admission enquiry", "admissions", "admission cell", "enquiry office"],
+    "navigationNodeId": "node-admission-office"
+  },
+  {
+    "id": "demo-accounts-office",
+    "name": "Accounts Office",
+    "type": "office",
+    "buildingId": "building-admin",
+    "floorId": "floor-admin-ground",
+    "roomNumber": "A-105",
+    "description": "Fee payment and financial services. [DEMO DATA]",
+    "aliases": ["accounts", "fees", "fee counter", "fees payment", "accounts office", "fee office", "pay fees"],
+    "navigationNodeId": "node-accounts-office"
+  },
+  {
+    "id": "demo-exam-cell",
+    "name": "Examination Cell",
+    "type": "office",
+    "buildingId": "building-admin",
+    "floorId": "floor-admin-first",
+    "roomNumber": "A-201",
+    "description": "Manages examination schedules, hall tickets, and results. [DEMO DATA]",
+    "aliases": ["exam cell", "examination", "exam office", "examination cell", "exam department", "hall ticket"],
+    "navigationNodeId": "node-exam-cell"
+  },
+  {
+    "id": "demo-principal-office",
+    "name": "Principal Office",
+    "type": "office",
+    "buildingId": "building-admin",
+    "floorId": "floor-admin-first",
+    "roomNumber": "A-202",
+    "description": "Office of the Principal. [DEMO DATA]",
+    "aliases": ["principal", "principal office", "principal cabin", "director office"],
+    "navigationNodeId": "node-principal-office"
+  },
+  {
+    "id": "demo-library",
+    "name": "Central Library",
+    "type": "facility",
+    "buildingId": "building-main",
+    "floorId": "floor-main-ground",
+    "roomNumber": "M-010",
+    "description": "Central library with books, journals, and digital resources. [DEMO DATA]",
+    "aliases": ["library", "central library", "book", "books", "reading room", "lib"],
+    "navigationNodeId": "node-library"
+  },
+  {
+    "id": "demo-computer-dept",
+    "name": "Computer Engineering Department",
+    "type": "department",
+    "buildingId": "building-main",
+    "floorId": "floor-main-first",
+    "roomNumber": "M-110",
+    "description": "Computer Engineering department office and faculty cabins. [DEMO DATA]",
+    "aliases": ["computer", "computer department", "computer engineering", "cse", "cs department", "comp dept"],
+    "navigationNodeId": "node-computer-dept"
+  },
+  {
+    "id": "demo-hod-computer",
+    "name": "HOD Cabin — Computer Engineering",
+    "type": "office",
+    "buildingId": "building-main",
+    "floorId": "floor-main-first",
+    "roomNumber": "M-111",
+    "description": "Office of the Head of Department, Computer Engineering. [DEMO DATA]",
+    "aliases": ["hod", "hod cabin", "hod computer", "head of department", "computer hod", "hod ce", "hod computer engineering"],
+    "navigationNodeId": "node-hod-computer"
+  },
+  {
+    "id": "demo-mechanical-dept",
+    "name": "Mechanical Engineering Department",
+    "type": "department",
+    "buildingId": "building-main",
+    "floorId": "floor-main-second",
+    "roomNumber": "M-210",
+    "description": "Mechanical Engineering department office. [DEMO DATA]",
+    "aliases": ["mechanical", "mechanical department", "mechanical engineering", "mech dept", "mech"],
+    "navigationNodeId": null
+  },
+  {
+    "id": "demo-civil-dept",
+    "name": "Civil Engineering Department",
+    "type": "department",
+    "buildingId": "building-main",
+    "floorId": "floor-main-second",
+    "roomNumber": "M-220",
+    "description": "Civil Engineering department office. [DEMO DATA]",
+    "aliases": ["civil", "civil department", "civil engineering", "civil dept"],
+    "navigationNodeId": null
+  },
+  {
+    "id": "demo-canteen",
+    "name": "Canteen",
+    "type": "facility",
+    "buildingId": "building-main",
+    "floorId": "floor-main-ground",
+    "roomNumber": "M-005",
+    "description": "College canteen serving food and beverages. [DEMO DATA]",
+    "aliases": ["canteen", "cafeteria", "food", "mess", "dining"],
+    "navigationNodeId": null
+  }
+]

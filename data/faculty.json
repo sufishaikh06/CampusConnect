@@ -1,0 +1,20 @@
+[
+  {
+    "id": "faculty-001",
+    "name": "Prof. A. Sharma",
+    "department": "dept-computer",
+    "designation": "HOD",
+    "cabin": "M-111",
+    "locationId": "demo-hod-computer",
+    "description": "[DEMO DATA — not a real faculty member]"
+  },
+  {
+    "id": "faculty-002",
+    "name": "Prof. B. Patil",
+    "department": "dept-computer",
+    "designation": "Assistant Professor",
+    "cabin": "M-112",
+    "locationId": "demo-computer-dept",
+    "description": "[DEMO DATA — not a real faculty member]"
+  }
+]

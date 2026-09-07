@@ -1,0 +1,112 @@
+[
+  {
+    "id": "pano-main-gate",
+    "nodeId": "node-main-gate",
+    "imageUrl": "/panoramas/sample-outdoor.svg",
+    "label": "Main Gate",
+    "hotspots": [
+      { "targetNodeId": "node-reception", "pitch": -5, "yaw": 0, "label": "Reception →", "direction": "forward" }
+    ]
+  },
+  {
+    "id": "pano-reception",
+    "nodeId": "node-reception",
+    "imageUrl": "/panoramas/sample-indoor.svg",
+    "label": "Reception",
+    "hotspots": [
+      { "targetNodeId": "node-main-gate",           "pitch": -5, "yaw": 180, "label": "← Main Gate",          "direction": "back" },
+      { "targetNodeId": "node-admin-entrance",      "pitch": -5, "yaw": 90,  "label": "Admin Building →",     "direction": "right" },
+      { "targetNodeId": "node-main-building-entrance","pitch":-5, "yaw": -90, "label": "← Main Building",     "direction": "left" }
+    ]
+  },
+  {
+    "id": "pano-admin-entrance",
+    "nodeId": "node-admin-entrance",
+    "imageUrl": "/panoramas/sample-corridor.svg",
+    "label": "Administration Building Entrance",
+    "hotspots": [
+      { "targetNodeId": "node-reception",      "pitch": -5, "yaw": 180, "label": "← Reception",   "direction": "back" },
+      { "targetNodeId": "node-admin-corridor", "pitch": -5, "yaw": 0,   "label": "Corridor →",    "direction": "forward" }
+    ]
+  },
+  {
+    "id": "pano-admin-corridor",
+    "nodeId": "node-admin-corridor",
+    "imageUrl": "/panoramas/sample-corridor.svg",
+    "label": "Ground Floor Corridor",
+    "hotspots": [
+      { "targetNodeId": "node-admin-entrance",  "pitch": -5, "yaw": 180, "label": "← Back",            "direction": "back" },
+      { "targetNodeId": "node-admission-office","pitch": -5, "yaw": -90, "label": "Admission Office ←", "direction": "left" },
+      { "targetNodeId": "node-accounts-office", "pitch": -5, "yaw": 90,  "label": "→ Accounts Office",  "direction": "right" },
+      { "targetNodeId": "node-admin-staircase", "pitch": -5, "yaw": 0,   "label": "Staircase ↑",        "direction": "forward" }
+    ]
+  },
+  {
+    "id": "pano-admission-office",
+    "nodeId": "node-admission-office",
+    "imageUrl": "/panoramas/sample-office.svg",
+    "label": "Admission Office",
+    "hotspots": [
+      { "targetNodeId": "node-admin-corridor", "pitch": -5, "yaw": 0, "label": "← Back to Corridor", "direction": "back" }
+    ]
+  },
+  {
+    "id": "pano-accounts-office",
+    "nodeId": "node-accounts-office",
+    "imageUrl": "/panoramas/sample-office.svg",
+    "label": "Accounts Office",
+    "hotspots": [
+      { "targetNodeId": "node-admin-corridor", "pitch": -5, "yaw": 0, "label": "← Back to Corridor", "direction": "back" }
+    ]
+  },
+  {
+    "id": "pano-main-building-entrance",
+    "nodeId": "node-main-building-entrance",
+    "imageUrl": "/panoramas/sample-indoor.svg",
+    "label": "Main Building Entrance",
+    "hotspots": [
+      { "targetNodeId": "node-reception",      "pitch": -5, "yaw": 180, "label": "← Reception",      "direction": "back" },
+      { "targetNodeId": "node-main-staircase", "pitch": -5, "yaw": 0,   "label": "Staircase →",      "direction": "forward" },
+      { "targetNodeId": "node-library",        "pitch": -5, "yaw": 90,  "label": "→ Library",        "direction": "right" }
+    ]
+  },
+  {
+    "id": "pano-main-staircase",
+    "nodeId": "node-main-staircase",
+    "imageUrl": "/panoramas/sample-staircase.svg",
+    "label": "Main Building Staircase",
+    "hotspots": [
+      { "targetNodeId": "node-main-building-entrance", "pitch": -5, "yaw": 180, "label": "← Ground Floor", "direction": "down" },
+      { "targetNodeId": "node-first-floor-corridor",   "pitch": 20, "yaw": 0,   "label": "First Floor ↑",  "direction": "up" }
+    ]
+  },
+  {
+    "id": "pano-first-floor-corridor",
+    "nodeId": "node-first-floor-corridor",
+    "imageUrl": "/panoramas/sample-corridor.svg",
+    "label": "First Floor Corridor",
+    "hotspots": [
+      { "targetNodeId": "node-main-staircase",  "pitch": -5, "yaw": 180, "label": "← Stairs",               "direction": "back" },
+      { "targetNodeId": "node-computer-dept",   "pitch": -5, "yaw": -90, "label": "Computer Engineering ←",  "direction": "left" }
+    ]
+  },
+  {
+    "id": "pano-computer-dept",
+    "nodeId": "node-computer-dept",
+    "imageUrl": "/panoramas/sample-office.svg",
+    "label": "Computer Engineering Department",
+    "hotspots": [
+      { "targetNodeId": "node-first-floor-corridor", "pitch": -5, "yaw": 180, "label": "← Corridor",    "direction": "back" },
+      { "targetNodeId": "node-hod-computer",         "pitch": -5, "yaw": 0,   "label": "HOD Cabin →",   "direction": "forward" }
+    ]
+  },
+  {
+    "id": "pano-hod-computer",
+    "nodeId": "node-hod-computer",
+    "imageUrl": "/panoramas/sample-office.svg",
+    "label": "HOD Cabin — Computer Engineering",
+    "hotspots": [
+      { "targetNodeId": "node-computer-dept", "pitch": -5, "yaw": 180, "label": "← Department", "direction": "back" }
+    ]
+  }
+]

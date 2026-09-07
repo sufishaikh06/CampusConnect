@@ -1,0 +1,20 @@
+[
+  {
+    "id": "building-admin",
+    "name": "Administration Building",
+    "description": "Houses administrative offices, admission, examination, and accounts departments. [DEMO DATA]",
+    "floors": ["floor-admin-ground", "floor-admin-first"]
+  },
+  {
+    "id": "building-main",
+    "name": "Main Academic Building",
+    "description": "Primary academic building with all engineering departments, laboratories, and library. [DEMO DATA]",
+    "floors": ["floor-main-ground", "floor-main-first", "floor-main-second"]
+  },
+  {
+    "id": "building-gate",
+    "name": "Main Gate & Reception",
+    "description": "Campus entrance with security cabin and visitor reception. [DEMO DATA]",
+    "floors": ["floor-gate-ground"]
+  }
+]

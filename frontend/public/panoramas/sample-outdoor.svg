@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2048" viewBox="0 0 4096 2048">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="60%" stop-color="#E0F4FF"/>
+      <stop offset="60%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+  </defs>
+  <rect width="4096" height="2048" fill="url(#sky)"/>
+  <rect x="1600" y="800" width="896" height="700" fill="#B0BEC5"/>
+  <rect x="1700" y="900" width="100" height="200" fill="#455A64"/>
+  <rect x="1950" y="900" width="100" height="200" fill="#455A64"/>
+  <rect x="2200" y="900" width="120" height="600" rx="8" fill="#78909C"/>
+  <text x="2048" y="1900" font-family="Arial" font-size="80" fill="white" text-anchor="middle" opacity="0.8">Main Gate - Sanjivani College (DEMO)</text>
+</svg>

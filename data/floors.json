@@ -1,0 +1,8 @@
+[
+  { "id": "floor-gate-ground",   "buildingId": "building-gate",  "name": "Ground Floor", "floorNumber": 0 },
+  { "id": "floor-admin-ground",  "buildingId": "building-admin", "name": "Ground Floor", "floorNumber": 0 },
+  { "id": "floor-admin-first",   "buildingId": "building-admin", "name": "First Floor",  "floorNumber": 1 },
+  { "id": "floor-main-ground",   "buildingId": "building-main",  "name": "Ground Floor", "floorNumber": 0 },
+  { "id": "floor-main-first",    "buildingId": "building-main",  "name": "First Floor",  "floorNumber": 1 },
+  { "id": "floor-main-second",   "buildingId": "building-main",  "name": "Second Floor", "floorNumber": 2 }
+]

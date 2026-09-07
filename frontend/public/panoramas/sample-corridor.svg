@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2048" viewBox="0 0 4096 2048">
+  <rect width="4096" height="2048" fill="#ECEFF1"/>
+  <polygon points="0,0 4096,0 3200,800 896,800" fill="#CFD8DC"/>
+  <polygon points="0,2048 4096,2048 3200,1248 896,1248" fill="#B0BEC5"/>
+  <polygon points="0,0 896,800 896,1248 0,2048"  fill="#B0BEC5"/>
+  <polygon points="4096,0 3200,800 3200,1248 4096,2048" fill="#B0BEC5"/>
+  <rect x="896" y="800" width="2304" height="448" fill="#E8EAF6"/>
+  <rect x="896" y="800" width="2304" height="10" fill="#9FA8DA"/>
+  <rect x="896" y="1238" width="2304" height="10" fill="#9FA8DA"/>
+  <text x="2048" y="1900" font-family="Arial" font-size="80" fill="#546E7A" text-anchor="middle" opacity="0.7">Corridor (DEMO)</text>
+</svg>
