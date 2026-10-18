@@ -5,17 +5,19 @@
     "code": "CE",
     "buildingId": "building-main",
     "floorId": "floor-main-first",
-    "locationId": "demo-computer-dept",
-    "description": "B.Tech Computer Engineering programme. [DEMO DATA]"
+    "locationId": "comp-dept-entrance",
+    "hod": "Prof. Dr. M A Jawale",
+    "hodCabin": "132",
+    "description": "Department of Computer Engineering at Sanjivani College of Engineering. Located on the 1st Floor (Right side of Main Staircase)."
   },
   {
     "id": "dept-mechanical",
     "name": "Mechanical Engineering",
     "code": "ME",
     "buildingId": "building-main",
-    "floorId": "floor-main-second",
+    "floorId": "floor-main-first",
     "locationId": "demo-mechanical-dept",
-    "description": "B.Tech Mechanical Engineering programme. [DEMO DATA]"
+    "description": "B.Tech Mechanical Engineering programme. Located on the 1st Floor (Left side of Main Staircase)."
   },
   {
     "id": "dept-civil",

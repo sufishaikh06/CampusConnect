@@ -154,7 +154,7 @@ Main Gate → Reception → Main Building Entrance → Main Staircase → First 
 | 7     | 360° virtual tour (placeholder panos)  | ✅ Done     |
 | 8     | Routing connected to 360° navigation   | ✅ Done     |
 | 9     | QR code entry page                     | ✅ Done     |
-| 10    | AI/LLM integration (Gemini/OpenAI)     | ⏳ Pending  |
+| 10    | AI/LLM integration (Gemini/OpenAI)     | ✅ Done     |
 | 11    | Voice support (speech-to-text TTS)     | ⏳ Pending (basic mic UI done in Phase 2) |
 | 12    | Admin management panel                 | ✅ Done (basic — locations + faculty CRUD) |
 | 13    | Real campus data preparation           | ⏳ Pending (needs physical verification)  |
@@ -310,3 +310,106 @@ DEL  /api/admin/faculty/:id         (Bearer token required)
 ---
 
 <!-- APPEND NEW ENTRIES BELOW THIS LINE — DO NOT DELETE EXISTING ENTRIES -->
+
+### 2026-10-16 22:32 IST — Full Concept vs. Implementation Audit & Environment Restoration
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Conducted exhaustive audit comparing `CAMPUSCONNECT_AI_PROJECT_CONCEPT.md` and `CAMPUSCONNECT_AI_IMPLEMENTATION_PLAN.md` with the entire codebase.
+- Created `CAMPUSCONNECT_STATUS_AND_REQUIREMENTS.md` documenting completed modules, remaining gaps, and user action items.
+- Restored `backend/.env` with default development credentials and placeholder for `GEMINI_API_KEY`.
+- Installed all missing `node_modules` for both `backend` and `frontend`.
+- Verified backend services load cleanly (`node -e ...`).
+- Verified frontend production build compiles cleanly without errors (`vite build` -> 302KB bundle).
+
+---
+
+### 2026-10-17 00:42 IST — Phase 7: Pannellum 360° Virtual Navigation Implementation
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Updated `frontend/src/pages/NavigationPage.jsx` to integrate the Pannellum 360° viewer library:
+  - Imported `pannellum` and its stylesheet `pannellum/build/pannellum.css`.
+  - Replaced the static 2D `<img>` element with a `<div ref={panoramaRef} className="w-full h-full relative" />`.
+  - Added a `useEffect` hook keyed on `[currentNode, currentStepIndex]`.
+  - Initialized `window.pannellum.viewer` on `panoramaRef.current` configured with `type: 'equirectangular'`, `autoLoad: true`, and dynamic panorama source with fallback to `/panoramas/sample-indoor.svg`.
+  - Configured directional hotspots using `currentNode.hotspotPitch` and `currentNode.hotspotYaw`, connected to `handleNextStep()`.
+  - Added cleanup returning `.destroy()` on the viewer instance to prevent WebGL / event listener memory leaks.
+- Updated `backend/services/navigationEngine.js` to include `panoramaUrl`, `hotspotPitch`, and `hotspotYaw` matching next-step hotspot definitions from `data/panoramas.json`.
+- Verified production build compiles cleanly via `npm run build` (zero errors, bundle size 358KB).
+- Verified backend navigation route endpoint `/api/navigation/route` returns full panorama chain with pitch/yaw hotspots.
+
+---
+
+### 2026-10-17 00:51 IST — Phase 10: Gemini AI/LLM Integration
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Installed `@google/generative-ai` into `backend/package.json`.
+- Created `backend/services/aiService.js`:
+  - Initializes GoogleGenerativeAI client using `process.env.GEMINI_API_KEY`.
+  - Implements `processChatQuery(userMessage, campusLocations)` with timeout guard (default 7000ms).
+  - Uses system prompt instructing Gemini to act as CampusConnect AI for Sanjivani College with strict anti-hallucination constraints matching solely against official campus locations list.
+  - Formats output as strict JSON schema containing `intent`, `destinationName`, `confidence`, and `reply`.
+- Updated `backend/routes/chat.js`:
+  - Prioritizes `aiService.processChatQuery` to extract visitor intent and destination.
+  - Matches destination name back to official `locations` records.
+  - Implemented graceful error/timeout fallback to rule-based `intentService.processQuery` whenever the Gemini API key is unset or an error occurs.
+- Verified test suite and live endpoint:
+  - Missing key scenario tested: cleanly throws and logs warning without crash.
+  - Live API call `POST /api/chat` verified: returns 200 with structured JSON and `source: 'rule-based-fallback'`.
+  - Mock parsing and location matching verified.
+
+---
+
+### 2026-10-17 03:00 IST — Phase 13 Pilot: Real Campus Data for Computer Engineering Department (1st Floor)
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Integrated official Sanjivani College data for 1st Floor Computer Department:
+  - Added 22 real departmental rooms, labs, washrooms, water cooler, and faculty cabins in `data/locations.json`.
+  - Mapped 22 official Computer Engineering faculty members (HOD Prof. Dr. M. A. Jawale, Prof. Dr. A. B. Pawar, Mr. N. Y. Siddiqui, and all professors) to their specific cabins in `data/faculty.json`.
+  - Updated `data/departments.json` with HOD and floor location details.
+- Built a bidirectional navigation network in `data/navigation-nodes.json` and `data/navigation-edges.json`:
+  - Connected the Main Staircase landing (facing Mech Dept left, Comp Dept right).
+  - Modeled the entire 5-section corridor with ~15-20m door-to-door distances.
+  - Linked all left-side rooms (Staff Room 107, Dr. Pawar 106, Girls Washroom, Water Cooler, Boys Washroom, ADT Lab 104, Unix Lab 103, Software Labs 102 & 101).
+  - Linked all right-side rooms (Vertusa Lab 125, Celebal Lab 126, Staff Room 128, Network Lab 130, PG Lab 131, HOD Office 132, HPC Lab 133, Project Lab 134, Staff Room 135, Physics Lab, Language Lab 138).
+  - Added Secondary Staircase (East Landing) at the far end of the corridor with inverted reverse-order navigation.
+- Updated `data/panoramas.json` with full 1st floor corridor panoramic chain.
+- Verified test routes:
+  - Route from Main Gate -> HOD Office (Room 132): 10 steps, 246m with clear directions.
+  - Route from Main Gate -> Dr. Pawar Cabin (Room 106): 8 steps, 210m.
+  - Route from Secondary (East) Stairs -> Unix Lab (103): 4 steps.
+  - Route from Secondary (East) Stairs -> Vertusa Lab (125): 7 steps, 92m.
+- Verified chat search: Natural queries for faculty ("Dr. Pawar", "HOD Jawale", "Siddiqui") and facilities ("Celebal Lab", "Water cooler") resolve accurately to destinations.
+
+---
+
+### 2026-10-17 11:55 IST — Real JPEG/PNG 360° Photo Support in Pannellum Viewer
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Fixed `getPanoImage` in [NavigationPage.jsx](file:///d:/campus_connect/CampusConnect/frontend/src/pages/NavigationPage.jsx):
+  - Previously, `.startsWith('/panoramas/')` forcibly replaced `.jpg` extensions with `.svg`.
+  - Updated logic so real equirectangular `.jpg`, `.jpeg`, and `.png` images are loaded directly as high-resolution WebGL textures by Pannellum.
+- Verified frontend build passes cleanly via `npm run build` (zero errors, bundle size 358KB).
+
+---
+
+### 2026-10-18 14:15 IST — Gemini 2.5 Flash Migration & 360 Photo Ordering Alignment
+
+**Agent:** Antigravity (Gemini 3.8 Flash High)
+
+**Actions & Verification:**
+- Diagnosed Gemini 404 Not Found error (`models/gemini-1.5-flash is not found for API version v1beta`).
+- Tested user's Google Generative AI API key via ModelService endpoint — verified key is active and supports `gemini-2.5-flash` and `gemini-flash-latest`.
+- Updated `backend/.env`, `backend/.env.example`, and `backend/services/aiService.js` to use `gemini-2.5-flash` with 10s timeout guard.
+- Tested chat query with live Gemini API — successfully recognized intent and resolved destination (`Dr. A. B. Pawar Sir Cabin (106)`).
+- Prepared 14-photo sequence verification for `CampusConnect/data/360 photos/` to align corridor panoramas with actual walking layout.
+

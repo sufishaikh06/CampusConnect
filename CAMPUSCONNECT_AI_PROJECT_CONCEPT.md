@@ -287,7 +287,7 @@ Example aliases:
 "fees payment"
 "accounts"
 ```
-
+ 
 can map to the same official destination if the campus data
 administrator defines them that way.
 

@@ -93,13 +93,25 @@ function calculateRoute(startNodeId, destNodeId) {
   }
 
   // Build panorama sequence
-  const panoramaChain = path.map(nodeId => {
+  const panoramaChain = path.map((nodeId, idx) => {
     const pano = panosById[nodeId];
+    const nextNodeId = path[idx + 1];
+    const key = `${nodeId}__${nextNodeId}`;
+    const edge = edgeMap[key];
+    const matchingHotspot = pano?.hotspots?.find(h => h.targetNodeId === nextNodeId) || pano?.hotspots?.[0];
     return {
       nodeId,
       nodeName: nodesById[nodeId]?.name || nodeId,
       panoramaId: pano?.id || null,
       imageUrl: pano?.imageUrl || null,
+      panoramaUrl: pano?.imageUrl || null,
+      targetNodeId: nextNodeId || null,
+      hotspotPitch: matchingHotspot?.pitch ?? -8,
+      hotspotYaw: matchingHotspot?.yaw ?? 0,
+      hotspotDirection: matchingHotspot?.direction || edge?.direction || 'forward',
+      hotspotLabel: matchingHotspot?.label || edge?.instruction || 'Next Step',
+      instruction: edge?.instruction || '',
+      allHotspots: pano?.hotspots || [],
       hasPanorama: !!pano
     };
   });

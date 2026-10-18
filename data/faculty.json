@@ -1,20 +1,200 @@
 [
   {
-    "id": "faculty-001",
-    "name": "Prof. A. Sharma",
+    "id": "faculty-jawale",
+    "name": "Prof. Dr. M A Jawale",
     "department": "dept-computer",
-    "designation": "HOD",
-    "cabin": "M-111",
-    "locationId": "demo-hod-computer",
-    "description": "[DEMO DATA — not a real faculty member]"
+    "designation": "HOD & Professor",
+    "cabin": "132",
+    "locationId": "comp-hod-office",
+    "description": "Head of Computer Engineering Department, Professor, Room 132."
   },
   {
-    "id": "faculty-002",
-    "name": "Prof. B. Patil",
+    "id": "faculty-pawar",
+    "name": "Dr. A. B. Pawar",
     "department": "dept-computer",
-    "designation": "Assistant Professor",
-    "cabin": "M-112",
-    "locationId": "demo-computer-dept",
-    "description": "[DEMO DATA — not a real faculty member]"
+    "designation": "Professor",
+    "cabin": "106",
+    "locationId": "comp-pawar-cabin",
+    "description": "Professor, Computer Engineering Department, Cabin 106."
+  },
+  {
+    "id": "faculty-siddiqui",
+    "name": "Mr. N. Y. Siddiqui",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "126",
+    "locationId": "comp-lab-celebal",
+    "description": "Associate Professor, Celebal Lab (Room 126)."
+  },
+  {
+    "id": "faculty-kalavadekar",
+    "name": "Dr. P. N. Kalavadekar",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "130",
+    "locationId": "comp-staff-130",
+    "description": "Associate Professor, Staff Room 130."
+  },
+  {
+    "id": "faculty-eshwari",
+    "name": "Prof. J. Eshwari",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "130",
+    "locationId": "comp-staff-130",
+    "description": "Associate Professor, Staff Room 130."
+  },
+  {
+    "id": "faculty-dange",
+    "name": "Dr. B. J. Dange",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-bhaskar",
+    "name": "Dr. T. Bhaskar",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-brahmane",
+    "name": "Dr. A. V. Brahmane",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-deshmukh",
+    "name": "Dr. S. R. Deshmukh",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-gunjal",
+    "name": "Dr. S. N. Gunjal",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-pardeshi",
+    "name": "Dr. N. G. Pardeshi",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-kotame",
+    "name": "Prof. B. B. Kotame",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-agrawal",
+    "name": "Prof. Monika Agrawal",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-mokal",
+    "name": "Prof. A. B. Mokal",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-dhanrao",
+    "name": "Prof. P. M. Dhanrao",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "107",
+    "locationId": "comp-staff-107",
+    "description": "Associate Professor, Staff Room 107."
+  },
+  {
+    "id": "faculty-khodke",
+    "name": "Dr. H. E. Khodke",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "128",
+    "locationId": "comp-staff-128",
+    "description": "Associate Professor, Staff Room 128."
+  },
+  {
+    "id": "faculty-bodhe",
+    "name": "Dr. A. S. Bodhe",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "128",
+    "locationId": "comp-staff-128",
+    "description": "Associate Professor, Staff Room 128."
+  },
+  {
+    "id": "faculty-dhanwate",
+    "name": "Prof. P. B. Dhanwate",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "128",
+    "locationId": "comp-staff-128",
+    "description": "Associate Professor, Staff Room 128."
+  },
+  {
+    "id": "faculty-gawali",
+    "name": "Ms. Swapnali Sunil Gawali",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "128",
+    "locationId": "comp-staff-128",
+    "description": "Associate Professor, Staff Room 128."
+  },
+  {
+    "id": "faculty-kale",
+    "name": "Prof. J. N. Kale",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "104",
+    "locationId": "comp-staff-104",
+    "description": "Associate Professor, Staff Room 104."
+  },
+  {
+    "id": "faculty-nirgude",
+    "name": "Prof. V. N. Nirgude",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "104",
+    "locationId": "comp-staff-104",
+    "description": "Associate Professor, Staff Room 104."
+  },
+  {
+    "id": "faculty-shivarkar",
+    "name": "Prof. S. A. Shivarkar",
+    "department": "dept-computer",
+    "designation": "Associate Professor",
+    "cabin": "104",
+    "locationId": "comp-staff-104",
+    "description": "Associate Professor, Staff Room 104."
   }
 ]
