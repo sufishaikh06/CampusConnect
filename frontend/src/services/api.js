@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = 'https://campusconnect-76qc.onrender.com';
 
 async function api(path, options = {}) {
   const token = localStorage.getItem('adminToken');
@@ -18,39 +18,39 @@ async function api(path, options = {}) {
 }
 
 export const campusAPI = {
-  health:          ()           => api('/health'),
+  health: () => api('/health'),
   // Locations
-  getLocations:    ()           => api('/locations'),
-  getLocation:     (id)         => api(`/locations/${id}`),
-  searchLocations: (q)          => api(`/locations/search?q=${encodeURIComponent(q)}`),
+  getLocations: () => api('/locations'),
+  getLocation: (id) => api(`/locations/${id}`),
+  searchLocations: (q) => api(`/locations/search?q=${encodeURIComponent(q)}`),
   // Buildings
-  getBuildings:    ()           => api('/buildings'),
+  getBuildings: () => api('/buildings'),
   // Departments
-  getDepartments:  ()           => api('/departments'),
+  getDepartments: () => api('/departments'),
   // Faculty
-  getFaculty:      ()           => api('/faculty'),
+  getFaculty: () => api('/faculty'),
   // Navigation
-  getNavNodes:     ()           => api('/navigation/nodes'),
-  getNavEdges:     ()           => api('/navigation/edges'),
-  getRoute:        (body)       => api('/navigation/route', { method: 'POST', body: JSON.stringify(body) }),
+  getNavNodes: () => api('/navigation/nodes'),
+  getNavEdges: () => api('/navigation/edges'),
+  getRoute: (body) => api('/navigation/route', { method: 'POST', body: JSON.stringify(body) }),
   // Panoramas
-  getPanoramas:    ()           => api('/navigation/panoramas'),
-  getPanorama:     (id)         => api(`/navigation/panoramas/${id}`),
+  getPanoramas: () => api('/navigation/panoramas'),
+  getPanorama: (id) => api(`/navigation/panoramas/${id}`),
   // Chat
-  chat:            (message, startNodeId) =>
+  chat: (message, startNodeId) =>
     api('/chat', { method: 'POST', body: JSON.stringify({ message, startNodeId }) }),
   // Auth
-  login:           (username, password) =>
+  login: (username, password) =>
     api('/auth/login', { method: 'POST', body: JSON.stringify({ username, password }) }),
-  verifyToken:     (token) =>
+  verifyToken: (token) =>
     api('/auth/verify', { method: 'POST', body: JSON.stringify({ token }) }),
   // Admin
-  adminStats:      ()           => api('/admin/stats'),
-  adminLocations:  ()           => api('/admin/locations'),
-  adminAddLocation:(data)       => api('/admin/locations', { method: 'POST', body: JSON.stringify(data) }),
-  adminUpdateLocation: (id, d)  => api(`/admin/locations/${id}`, { method: 'PUT', body: JSON.stringify(d) }),
-  adminDeleteLocation: (id)     => api(`/admin/locations/${id}`, { method: 'DELETE' }),
-  adminFaculty:    ()           => api('/admin/faculty'),
-  adminAddFaculty: (data)       => api('/admin/faculty', { method: 'POST', body: JSON.stringify(data) }),
-  adminDeleteFaculty: (id)      => api(`/admin/faculty/${id}`, { method: 'DELETE' }),
+  adminStats: () => api('/admin/stats'),
+  adminLocations: () => api('/admin/locations'),
+  adminAddLocation: (data) => api('/admin/locations', { method: 'POST', body: JSON.stringify(data) }),
+  adminUpdateLocation: (id, d) => api(`/admin/locations/${id}`, { method: 'PUT', body: JSON.stringify(d) }),
+  adminDeleteLocation: (id) => api(`/admin/locations/${id}`, { method: 'DELETE' }),
+  adminFaculty: () => api('/admin/faculty'),
+  adminAddFaculty: (data) => api('/admin/faculty', { method: 'POST', body: JSON.stringify(data) }),
+  adminDeleteFaculty: (id) => api(`/admin/faculty/${id}`, { method: 'DELETE' }),
 };
