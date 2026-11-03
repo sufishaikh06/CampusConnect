@@ -1,4 +1,7 @@
-const API_BASE = 'https://campusconnect-76qc.onrender.com';
+const API_BASE = (
+  import.meta.env.VITE_API_BASE_URL ||
+  'https://campusconnect-76qc.onrender.com/api'
+).replace(/\/$/, '');
 
 async function api(path, options = {}) {
   const token = localStorage.getItem('adminToken');
